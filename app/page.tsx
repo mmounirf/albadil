@@ -4,7 +4,7 @@ import { IconInfoCircle } from '@tabler/icons-react';
 export const dynamic = 'force-dynamic';
 
 async function getData(): Promise<{ boycott: string; alternative: string }[]> {
-  const res = await fetch(`http://localhost:3000/api/data`);
+  const res = await fetch(`${process.env.NEXT_API_BASE_URL}/data`);
   return res.json();
 }
 
